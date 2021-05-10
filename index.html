@@ -9,7 +9,27 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>Learning Vue</title>
 </head>
-<body>
+<body class="font-serif">
+    <h1 class="text-5xl font-bold">Hello Vue :)</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <p>Title: {{ title }}</p>
+            <p>Author: {{ author }}</p>
+            <p>Age:  {{ age }}</p>
+        </div>
+
+        <button class="bg-blue-500 text-white px-5 py-1" @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span>
+        </button>
+        <!-- <button class="bg-black text-white px-5 py-1" v-on:click="age++">Increase Age</button>
+        <button class="bg-red-500 text-white px-5 py-1" v-on:click="age--">Decrease Age</button>
+        <button class="bg-green-500 text-white px-5 py-1" @click="changeTitle">Change Title</button> -->
+    </div>
+    
+
+    <script src="app.js"></script>
     
 </body>
 </html>
